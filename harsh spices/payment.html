@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment 202200216 Harshvir singh</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            margin: 0;
+        }
+        
+        .form-container {
+            padding: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        
+        .form-button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .form-button:hover {
+            background-color: #0069d9;
+        }
+        
+        .order-summary {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        
+        .order-summary h2 {
+            margin-bottom: 15px;
+        }
+        
+        .order-summary ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .order-summary li {
+            margin-bottom: 10px;
+        }
+        
+        .order-total {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .ship-button {
+            background-color: #f2f2f2;
+            color: #333;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        
+        .ship-button:hover {
+            background-color: #e2e2e2;
+        }
+        
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        
+        .modal-content {
+            background-color: #fefefe;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Totall Payment </h1>
+        </div>
+     
+        <div class="order-summary">
+            <h2>Order Summary</h2>
+            <ul>
+                <li>Items: $100.00</li>
+                <li>Shipping & Handling: $12.00</li>
+                <li>Total before tax: $112.00</li>
+                <li>Estimated GST: $20.00</li>
+                <li>Estimated HST: $10.00</li>
+            </ul>
+            <div class="order-total">Order Total: $142.00</div>
+            <a href="thanks.html" class="form-button">Proceed to Payment</a>
+        </div>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>How are shipping costs calculated?</h2>
+                <p>Shipping costs are calculated based on the weight and size of the items you order, as well as the shipping method you choose. You can see the estimated shipping cost for each item on the product detail page, and the final shipping cost will be calculated at checkout.</p>
+                <p>For more information, please see our <a href="#">Shipping and Delivery</a> page.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        var modal = document.getElementById("myModal");
+        var button = document.getElementById("shipping-costs-button");
+        var span = document.getElementsByClassName("close")[0];
+
+        button.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
